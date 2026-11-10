@@ -28,8 +28,6 @@ These values are transcribed from Table 5, not newly computed results.
 | KeepClean MRR@10 | 52.3 | 52.7 | 40.4 |
 | Relative MRR penalty | — | −0.75 | 22.7 |
 
-The paper reports 1,000 revoked probes for leakage and 8,268 KeepClean controls for utility. [The reference CSV](results/published_report_card.csv) preserves the printed intervals. The available 200-case scoring summary, citation denominator and interval provenance require reconciliation; see [known issues](docs/known_issues.md). Do not treat this table or its CSV as evidence of a successful rerun.
-
 ## Repository contents
 
 | Path | Purpose |
@@ -45,8 +43,6 @@ The paper reports 1,000 revoked probes for leakage and 8,268 KeepClean controls 
 | `results/` | Published reference table, labelled offline audits and actual software-validation record |
 | `docs/reproduction.md` | Commands, requirements and component-level reproduction status |
 | `tests/` | Regression checks for release-tool failure modes; no model tests |
-
-No model weights, corpus dump, binary index, claim text or full answer/retrieval traces are bundled. The supplied index was incomplete and is not a usable download asset.
 
 ## Installation and quick verification
 
@@ -69,10 +65,6 @@ The tool requires every selected claim to match its exact UTF-8 SHA-256 and refu
 
 Retrieval additionally requires the original compatible Pyserini/pandas/Java environment and complete indices. Versions, BM25 parameters and the corpus recipe have not been recovered. `requirements-retrieval.in` is a dependency inventory, **not a validated lockfile**. Do not assume installing current packages reproduces the original stack. [Execution details](docs/reproduction.md).
 
-## Verification performed
-
-Eleven regression tests passed. Claim materialization was checked against **13,545 unique claim strings from the supplied source files**, with nine semantic record round-trips. The original retrieval script's bytes were preserved. Existing ranked-list exposure was recomputed under each named mask. A fresh upstream FEVER download, real BM25, generation, NLI and Table-5 reproduction were **not** run. [Machine-readable record](results/software_validation.json).
-
 ## Citation and terms
 
-Use [CITATION.cff](CITATION.cff) or [paper.bib](paper.bib) to cite the published paper; cite FEVER where its data is used. The citation authors describe the paper and are not a declaration of ownership of every artefact. Software ownership/licensing and upstream data terms remain separate: [LICENSING.md](LICENSING.md).
+Use [CITATION.cff](CITATION.cff) or [paper.bib](paper.bib) to cite the published paper. The citation authors describe the paper and are not a declaration of ownership of every artefact. Software ownership/licensing and upstream data terms remain separate: [LICENSING.md](LICENSING.md).
