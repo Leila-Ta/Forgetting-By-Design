@@ -80,4 +80,4 @@ Sixteen regression tests passed. Claim materialization was checked against **13,
 
 ## Citation and terms
 
-Use [CITATION.cff](CITATION.cff) or [paper.bib](paper.bib) to cite the published paper; cite FEVER where its data is used. The citation authors describe the paper and are not a declaration of ownership of every artefact. Software ownership/licensing and upstream data terms remain separate: [LICENSING.md](LICENSING.md).
+Use [CITATION.cff](CITATION.cff) or [paper.bib](paper.bib) to cite the published paper. The citation authors describe the paper and are not a declaration of ownership of every artefact. Software ownership/licensing and upstream data terms remain separate: [LICENSING.md](LICENSING.md).
