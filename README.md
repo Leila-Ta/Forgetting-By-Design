@@ -68,8 +68,6 @@ python3 tools/materialize_queries.py --fever /path/to/train.jsonl --out-dir work
 
 The tool requires every selected claim to match its exact UTF-8 SHA-256 and refuses missing/changed claims and existing output directories. It uses frozen ID lists and does not resample or infer a seed. See [data provenance](data/README.md).
 
-Retrieval additionally requires the original compatible Pyserini/pandas/Java environment and complete indices. Versions, BM25 parameters and the corpus recipe have not been recovered. `requirements-retrieval.in` is a dependency inventory, **not a validated lockfile**. Do not assume installing current packages reproduces the original stack. [Execution details](docs/reproduction.md).
-
 ## Citation and terms
 
 Use [CITATION.cff](CITATION.cff) or [paper.bib](paper.bib) to cite the published paper. The citation authors describe the paper and are not a declaration of ownership of every artefact. Software ownership/licensing and upstream data terms remain separate: [LICENSING.md](LICENSING.md).
