@@ -3,8 +3,6 @@
 **Leila Tavakoli and Mark Sanderson**  
 SIGIR 2026
 
-[Read the published paper](https://doi.org/10.1145/3805712.3808545)
-
 ## About the paper
 
 The paper introduces **Forgetting-by-Design (FBD)**, a mechanism-agnostic audit specification for selective forgetting in Retrieval-Augmented Generation systems. It distinguishes removing access to records from preventing disclosure of prohibited facts in generated answers.
