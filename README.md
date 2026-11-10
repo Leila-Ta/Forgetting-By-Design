@@ -1,16 +1,75 @@
-# Deletion Isn’t Enough: Auditing RAG for Selective Forgetting
+# Forgetting-by-Design: auditing RAG for selective forgetting
 
-**Leila Tavakoli and Mark Sanderson**  
-SIGIR 2026
+Research materials for **Leila Tavakoli and Mark Sanderson**, *Deletion Isn’t Enough: Auditing RAG for Selective Forgetting*, SIGIR 2026 Perspectives, pp. 2721–2733. [Published paper / DOI](https://doi.org/10.1145/3805712.3808545).
 
-## About the paper
+## Research contribution
 
-The paper introduces **Forgetting-by-Design (FBD)**, a mechanism-agnostic audit specification for selective forgetting in Retrieval-Augmented Generation systems. It distinguishes removing access to records from preventing disclosure of prohibited facts in generated answers.
+Forgetting-by-Design (FBD) is a mechanism-agnostic, black-box audit specification. It separates record-scoped enforcement from proposition-scoped non-disclosure, checking whether revoked information is still disclosed while lawful utility and attribution remain usable. It is an audit protocol, not an unlearning mechanism or a compliance certificate.
 
-FBD compares baseline, deletion and retrieval-filtering states, examining retrieval exposure, answer-level disclosure, lawful utility, abstention and attribution. The paper sets out a deployment-facing research perspective and audit agenda for changing information-access obligations.
+The paired protocol compares fixed queries across:
 
-## Citation
+- **PRE:** the baseline system.
+- **POST:** hard deletion followed by re-indexing.
+- **FILT:** retrieval filtering with rank filling, or explicitly reported shortfall.
 
-Please cite the published paper using [CITATION.cff](CITATION.cff) or [paper.bib](paper.bib).
+The paper's illustrative stack uses FEVER/Wikipedia, BM25, LLaMA-3-8B-Instruct and a frozen NLI verifier with threshold 0.80. The supplied script implements **retrieval only**. It does not create a POST index, run a language model or implement the answer-level metrics.
 
-Leila Tavakoli and Mark Sanderson. 2026. *Deletion Isn’t Enough: Auditing RAG for Selective Forgetting*. Proceedings of the 49th International ACM SIGIR Conference on Research and Development in Information Retrieval, pp. 2721–2733. DOI: [10.1145/3805712.3808545](https://doi.org/10.1145/3805712.3808545).
+## Published reference values
+
+These values are transcribed from Table 5, not newly computed results.
+
+| Metric (%) | PRE | POST | FILT |
+| --- | ---: | ---: | ---: |
+| Answer leakage | 17.0 | 0.5 | 1.0 |
+| Abstention | 12.0 | 26.5 | 27.0 |
+| Citation coverage | 64.0 | 8.0 | 9.5 |
+| KeepClean MRR@10 | 52.3 | 52.7 | 40.4 |
+| Relative MRR penalty | — | −0.75 | 22.7 |
+
+## Repository contents
+
+| Path | Purpose |
+| --- | --- |
+| `scripts/original/run_stageB.py` | Byte-identical supplied retrieval script |
+| `tools/run_retrieval.py` | New input/output guards around that script; ranking/filtering unchanged |
+| `data/manifests/` | Candidate FEVER IDs, targets, annotations and exact claim hashes; no claim/answer text |
+| `data/scopes/` | Two candidate enforcement scopes and a separate diagnostic 778-target universe |
+| `data/annotations/` | Stored flags/scores and exact text hashes from two separate candidate trace families |
+| `data/ranks/` | Candidate multi-target PRE/POST and single-target FILT ranks; representations differ |
+| `tools/materialize_queries.py` | Recover matching query text from a locally acquired FEVER file |
+| `tools/audit_retrieval_exports.py` | Recompute exact-ID exposure from existing retrieval TSVs |
+| `tools/verify_release.py` | Check file hashes, candidate manifests and annotation populations |
+| `tools/summarize_candidate_artifacts.py` | Re-aggregate stored flags and explicit per-query gold-target hits |
+| `tools/prepare_candidate_annotations.py` | Rebuild text-free annotations from the supplied source archives |
+| `configs/retrieval_recorded.json` | Observed k=10/M=200; unknown original settings explicitly null |
+| `results/` | Published reference table, labelled offline audits and actual software-validation record |
+| `docs/reproduction.md` | Commands, requirements and component-level reproduction status |
+| `tests/` | Regression checks for release-tool failure modes; no model tests |
+
+No model weights, corpus dump, binary index or query/answer text are bundled. Candidate score annotations, citation/top-k handles and target ranks are available. The supplied index was incomplete and is not a usable download asset. [Additional evidence and its limits](docs/additional_artifacts.md).
+
+## Installation and quick verification
+
+The release tools and tests require **Python 3.10+** and use its standard library. They were checked with Python 3.12.14; this is not the original experiment environment. From the repository root:
+
+```bash
+python3 tools/verify_release.py
+python3 -m unittest discover -s tests -v
+python3 tools/summarize_candidate_artifacts.py --out work/candidate_annotation_summary.json
+```
+
+These commands need no GPU or Pyserini and validate the package, not the published experiments.
+
+For query reconstruction, obtain the matching FEVER JSONL through the [official dataset page](https://fever.ai/dataset/fever.html), following its terms. Then:
+
+```bash
+python3 tools/materialize_queries.py --fever /path/to/train.jsonl --out-dir work/data
+```
+
+The tool requires every selected claim to match its exact UTF-8 SHA-256 and refuses missing/changed claims and existing output directories. It uses frozen ID lists and does not resample or infer a seed. See [data provenance](data/README.md).
+
+Retrieval additionally requires the original compatible Pyserini/pandas/Java environment and complete indices. Versions, BM25 parameters and the corpus recipe have not been recovered. `requirements-retrieval.in` is a dependency inventory, **not a validated lockfile**. Do not assume installing current packages reproduces the original stack. [Execution details](docs/reproduction.md).
+
+## Citation and terms
+
+Use [CITATION.cff](CITATION.cff) or [paper.bib](paper.bib) to cite the published paper. The citation authors describe the paper and are not a declaration of ownership of every artefact. Software ownership/licensing and upstream data terms remain separate: [LICENSING.md](LICENSING.md).
