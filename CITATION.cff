@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "Please cite the published paper using the preferred-citation below."
+title: "Paper companion: Deletion Isn’t Enough: Auditing RAG for Selective Forgetting"
+authors:
+  - family-names: Tavakoli
+    given-names: Leila
+  - family-names: Sanderson
+    given-names: Mark
+url: "https://github.com/Leila-Ta/Forgetting-By-Design"
+preferred-citation:
+  type: conference-paper
+  title: "Deletion Isn’t Enough: Auditing RAG for Selective Forgetting"
+  authors:
+    - family-names: Tavakoli
+      given-names: Leila
+    - family-names: Sanderson
+      given-names: Mark
+  year: 2026
+  doi: "10.1145/3805712.3808545"
