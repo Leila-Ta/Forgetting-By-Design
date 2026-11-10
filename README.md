@@ -74,10 +74,6 @@ The tool requires every selected claim to match its exact UTF-8 SHA-256 and refu
 
 Retrieval additionally requires the original compatible Pyserini/pandas/Java environment and complete indices. Versions, BM25 parameters and the corpus recipe have not been recovered. `requirements-retrieval.in` is a dependency inventory, **not a validated lockfile**. Do not assume installing current packages reproduces the original stack. [Execution details](docs/reproduction.md).
 
-## Verification performed
-
-Sixteen regression tests passed. Claim materialization was checked against **13,545 unique claim strings from the supplied source files**, with nine semantic record round-trips. The original retrieval script's bytes were preserved. Existing ranked-list exposure was recomputed under each named mask. Stored leakage flags give 34/200, 1/200 and 2/200, matching the printed percentages without verifying their original detector or the stated 1,000-case denominator. Multi-target ranks reproduce the supplied category means exactly; these target-hit events are not global forbidden-record exposure. A fresh upstream FEVER download, real BM25, generation, NLI and Table-5 reproduction were **not** run. [Machine-readable record](results/software_validation.json).
-
 ## Citation and terms
 
 Use [CITATION.cff](CITATION.cff) or [paper.bib](paper.bib) to cite the published paper. The citation authors describe the paper and are not a declaration of ownership of every artefact. Software ownership/licensing and upstream data terms remain separate: [LICENSING.md](LICENSING.md).
