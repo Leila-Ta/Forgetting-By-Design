@@ -1,0 +1,40 @@
+{
+  "verification": "offline recomputation from supplied lists; no retrieval, generation or published result reproduced",
+  "mask_file": "pool_630.txt",
+  "mask_size": 630,
+  "mask_sha256": "c6e29edf1d93e0486c6e0dba0a832c235ae06a00dff318774cc6c448880be090",
+  "states": {
+    "PRE": {
+      "queries": 1000,
+      "served_exposure_count": 973,
+      "served_exposure_rate": 0.973,
+      "stored_flag_disagreements": 973,
+      "shortfall_query_count": 0,
+      "nonempty_answer_cells": 0,
+      "nonempty_citation_cells": 0,
+      "source_sha256": "695f33c2923ac26331e781ce01f51ad3809109db1b7433c6469426b5ff69b000"
+    },
+    "POST": {
+      "queries": 1000,
+      "served_exposure_count": 0,
+      "served_exposure_rate": 0.0,
+      "stored_flag_disagreements": 0,
+      "shortfall_query_count": 0,
+      "nonempty_answer_cells": 0,
+      "nonempty_citation_cells": 0,
+      "source_sha256": "050088c20b8f0cd4647cb7cb748c276d9f45626ff58954c4c5e25bfc26d3582a"
+    },
+    "FILT": {
+      "queries": 1000,
+      "served_exposure_count": 0,
+      "served_exposure_rate": 0.0,
+      "stored_flag_disagreements": 0,
+      "shortfall_query_count": 0,
+      "nonempty_answer_cells": 0,
+      "nonempty_citation_cells": 0,
+      "source_sha256": "7d4650ef084ae3bf7aac85c553a5c3b684457b75cc08f4005147e47d6ab9f34f"
+    }
+  },
+  "PRE_FILT_identical_raw_lists": 1000,
+  "FILT_filter_transformation_matches": 1000
+}

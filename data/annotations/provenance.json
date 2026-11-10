@@ -1,0 +1,30 @@
+{
+  "status": "candidate supplied annotations; detectors not rerun; not the verified published run",
+  "sources": [
+    {
+      "archive": "stageB_outputs-20261110T041817Z-1-001.zip",
+      "archive_sha256": "2f82f2487ad62ad865619e1d294ccb9d7d2a65a147f8d5dec8e00dcbfd78639e",
+      "member": "stageB_outputs/stageB_rag_outputs_llama3_8b.jsonl",
+      "member_sha256": "f5444d2a4543cec99f97591a9a54350b1a5dff1b2937efc1a3feee185a4d6f76",
+      "member_bytes": 717774
+    },
+    {
+      "archive": "stageB_exports-20261110T041817Z-1-001.zip",
+      "archive_sha256": "32a80555ba5b4cd23d2508fae6d9e15d185bcb91efa35ae88d3b86a250119ba5",
+      "member": "stageB_exports/stageB_forget_llama3_bm25_2.jsonl",
+      "member_sha256": "fd663466b87de69a58dfd14ec326edf1e630305f0e5523a559902cad70f0c93b",
+      "member_bytes": 39002
+    }
+  ],
+  "generation_records": 1200,
+  "diagnostic_records": 60,
+  "transformations": [
+    "Remove query, answer and forbidden-fact strings; retain their exact UTF-8 SHA-256",
+    "Represent qids as decimal strings and retain source line numbers",
+    "Map diagnostic condition labels explicitly while retaining source_condition",
+    "CSR NaN on source-labelled abstentions becomes null with original NaN notation; never zero"
+  ],
+  "diagnostic_CSR_null_normalizations": 31,
+  "original_scoring_code_available": false,
+  "generation_abstention_labels_available": false
+}

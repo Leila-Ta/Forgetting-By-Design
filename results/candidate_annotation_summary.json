@@ -1,0 +1,184 @@
+{
+  "verification": "re-aggregation of supplied annotations and candidate rank events; no original scoring or model rerun",
+  "generation_200perkind": [
+    {
+      "kind": "forget",
+      "condition": "FILT",
+      "N_total": 200,
+      "stored_nonempty_citation_lists": 20,
+      "stored_cited_forbidden_true": 1,
+      "citation_flag_disagreements_under_gold778": 0,
+      "exact_INSUFFICIENT_EVIDENCE_count": 0,
+      "abstention_metric_status": "not computed: original labels/rule absent in this trace",
+      "stored_leak_strict_count": 2,
+      "stored_leak_strict_pct": 1.0,
+      "stored_leak_fuzzy90_count": 14,
+      "stored_leak_fuzzy90_pct": 7.0,
+      "stored_leak_any_count": 15,
+      "stored_leak_any_pct": 7.5
+    },
+    {
+      "kind": "forget",
+      "condition": "POST",
+      "N_total": 200,
+      "stored_nonempty_citation_lists": 16,
+      "stored_cited_forbidden_true": 1,
+      "citation_flag_disagreements_under_gold778": 0,
+      "exact_INSUFFICIENT_EVIDENCE_count": 0,
+      "abstention_metric_status": "not computed: original labels/rule absent in this trace",
+      "stored_leak_strict_count": 1,
+      "stored_leak_strict_pct": 0.5,
+      "stored_leak_fuzzy90_count": 15,
+      "stored_leak_fuzzy90_pct": 7.5,
+      "stored_leak_any_count": 16,
+      "stored_leak_any_pct": 8.0
+    },
+    {
+      "kind": "forget",
+      "condition": "PRE",
+      "N_total": 200,
+      "stored_nonempty_citation_lists": 128,
+      "stored_cited_forbidden_true": 122,
+      "citation_flag_disagreements_under_gold778": 0,
+      "exact_INSUFFICIENT_EVIDENCE_count": 0,
+      "abstention_metric_status": "not computed: original labels/rule absent in this trace",
+      "stored_leak_strict_count": 34,
+      "stored_leak_strict_pct": 17.0,
+      "stored_leak_fuzzy90_count": 105,
+      "stored_leak_fuzzy90_pct": 52.5,
+      "stored_leak_any_count": 141,
+      "stored_leak_any_pct": 70.5
+    },
+    {
+      "kind": "keep",
+      "condition": "FILT",
+      "N_total": 200,
+      "stored_nonempty_citation_lists": 67,
+      "stored_cited_forbidden_true": 0,
+      "citation_flag_disagreements_under_gold778": 0,
+      "exact_INSUFFICIENT_EVIDENCE_count": 0,
+      "abstention_metric_status": "not computed: original labels/rule absent in this trace"
+    },
+    {
+      "kind": "keep",
+      "condition": "POST",
+      "N_total": 200,
+      "stored_nonempty_citation_lists": 62,
+      "stored_cited_forbidden_true": 0,
+      "citation_flag_disagreements_under_gold778": 0,
+      "exact_INSUFFICIENT_EVIDENCE_count": 0,
+      "abstention_metric_status": "not computed: original labels/rule absent in this trace"
+    },
+    {
+      "kind": "keep",
+      "condition": "PRE",
+      "N_total": 200,
+      "stored_nonempty_citation_lists": 75,
+      "stored_cited_forbidden_true": 19,
+      "citation_flag_disagreements_under_gold778": 0,
+      "exact_INSUFFICIENT_EVIDENCE_count": 0,
+      "abstention_metric_status": "not computed: original labels/rule absent in this trace"
+    }
+  ],
+  "separate_diagnostic_20perstate": [
+    {
+      "condition": "PRE",
+      "N_total": 20,
+      "stored_abstain_count": 7,
+      "stored_leak_ans_count": 12,
+      "finite_CSR_count": 13,
+      "undefined_CSR_count": 7,
+      "NLI_debug_rows": 2
+    },
+    {
+      "condition": "POST",
+      "N_total": 20,
+      "stored_abstain_count": 13,
+      "stored_leak_ans_count": 7,
+      "finite_CSR_count": 7,
+      "undefined_CSR_count": 13,
+      "NLI_debug_rows": 1
+    },
+    {
+      "condition": "FILT",
+      "N_total": 20,
+      "stored_abstain_count": 11,
+      "stored_leak_ans_count": 9,
+      "finite_CSR_count": 9,
+      "undefined_CSR_count": 11,
+      "NLI_debug_rows": 0
+    }
+  ],
+  "candidate_gold_target_hits_at_10": [
+    {
+      "condition": "POST",
+      "harm_category": "birth_identity",
+      "N_queries": 3209,
+      "any_gold_target_hit_count": 0,
+      "any_gold_target_hit_rate": 0.0,
+      "weighted_target_hit_rate": 0.0
+    },
+    {
+      "condition": "POST",
+      "harm_category": "crime",
+      "N_queries": 271,
+      "any_gold_target_hit_count": 0,
+      "any_gold_target_hit_rate": 0.0,
+      "weighted_target_hit_rate": 0.0
+    },
+    {
+      "condition": "POST",
+      "harm_category": "illness",
+      "N_queries": 171,
+      "any_gold_target_hit_count": 0,
+      "any_gold_target_hit_rate": 0.0,
+      "weighted_target_hit_rate": 0.0
+    },
+    {
+      "condition": "POST",
+      "harm_category": "stigmatised_attribute",
+      "N_queries": 39,
+      "any_gold_target_hit_count": 0,
+      "any_gold_target_hit_rate": 0.0,
+      "weighted_target_hit_rate": 0.0
+    },
+    {
+      "condition": "PRE",
+      "harm_category": "birth_identity",
+      "N_queries": 3209,
+      "any_gold_target_hit_count": 2960,
+      "any_gold_target_hit_rate": 0.9224057338734808,
+      "weighted_target_hit_rate": 0.9224057338734808
+    },
+    {
+      "condition": "PRE",
+      "harm_category": "crime",
+      "N_queries": 271,
+      "any_gold_target_hit_count": 252,
+      "any_gold_target_hit_rate": 0.9298892988929889,
+      "weighted_target_hit_rate": 0.9298892988929889
+    },
+    {
+      "condition": "PRE",
+      "harm_category": "illness",
+      "N_queries": 171,
+      "any_gold_target_hit_count": 132,
+      "any_gold_target_hit_rate": 0.7719298245614035,
+      "weighted_target_hit_rate": 0.7719298245614035
+    },
+    {
+      "condition": "PRE",
+      "harm_category": "stigmatised_attribute",
+      "N_queries": 39,
+      "any_gold_target_hit_count": 32,
+      "any_gold_target_hit_rate": 0.8205128205128205,
+      "weighted_target_hit_rate": 0.8205128205128205
+    }
+  ],
+  "target_hit_caveat": "any relevant target per query, not global forbidden-handle exposure or a verified published HWE result",
+  "source_sha256": {
+    "data/annotations/generation_200perkind.jsonl": "4b57c45fc5340846f38851070310dca1c5a122411d001732ade38c4b9d0b7d9c",
+    "data/annotations/diagnostic_20perstate.jsonl": "9a123085f366fa07a12665bd065cd4ae77515c4503be46df6a7a1954f040fe6a",
+    "data/ranks/forget_multi_target_PRE_POST.tsv": "626706b0fd2bc011f62ac3979a1adcdd17132a9231e6cdc67735a750a851570b"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "status": "observed in supplied artefacts; not a recovered original experiment configuration",
+  "k": 10,
+  "M": 200,
+  "pool_scope": "data/scopes/pool_630.txt",
+  "alternative_resolved_scope": "data/scopes/resolved_605.txt",
+  "states": [
+    "PRE",
+    "POST",
+    "FILT"
+  ],
+  "FILT_source_index": "same complete index as PRE",
+  "POST_source_index": "separately deleted/rebuilt index, not created by this runner",
+  "bm25_k1": null,
+  "bm25_b": null,
+  "analyser": null,
+  "pyserini_version": null,
+  "original_python_version": null,
+  "corpus_snapshot": null,
+  "generation_runner": null,
+  "model_revision": null,
+  "tokenizer_revision": null,
+  "decoding": null,
+  "random_seed": null,
+  "nli_threshold_in_paper": 0.8,
+  "nli_checkpoint_revision": null,
+  "binary_snapshot_diagnostics_only": {
+    "lucene": "9.9.1",
+    "java_runtime": "21.0.9+10-Ubuntu-122.04",
+    "complete": false
+  }
+}
