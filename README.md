@@ -2,7 +2,7 @@
 
 Research materials for **Leila Tavakoli and Mark Sanderson**, *Deletion Isn’t Enough: Auditing RAG for Selective Forgetting*, SIGIR 2026 Perspectives, pp. 2721–2733. [Published paper / DOI](https://doi.org/10.1145/3805712.3808545).
 
-**Release status: partial research artefact release.** This repository contains the supplied retrieval runner, candidate identifier manifests, claim-reconstruction utilities and explicit verification records. It does **not yet reproduce the paper end to end**: generation/evaluation code, the frozen 8,268-control evaluation, the stated 1,000-probe answer run, corpus/index construction and the original environment remain unverified or missing. Additional files now supply paired 200-Forget/200-Keep answer records per state and a separate 20-per-state scored diagnostic; text-free annotations and rank evidence are bundled, with raw text retained for author review. Candidate manifests differ in target assignment and have not been certified as the published run. See [known issues](docs/known_issues.md) and [licensing](LICENSING.md).
+**Release status: partial research artefact release.** This repository contains the supplied retrieval runner, candidate identifier manifests, claim-reconstruction utilities and explicit verification records. It does **not yet reproduce the paper end to end**: generation/evaluation code, the frozen 8,268-control evaluation, the stated 1,000-probe answer run, corpus/index construction and the original environment remain unverified or missing. Additional files now supply paired 200-Forget/200-Keep answer records per state and a separate 20-per-state scored diagnostic; text-free annotations and rank evidence are bundled, with raw text retained for author review.
 
 ## Research contribution
 
@@ -28,7 +28,6 @@ These values are transcribed from Table 5, not newly computed results.
 | KeepClean MRR@10 | 52.3 | 52.7 | 40.4 |
 | Relative MRR penalty | — | −0.75 | 22.7 |
 
-The paper reports 1,000 revoked probes for leakage and 8,268 KeepClean controls for utility. [The reference CSV](results/published_report_card.csv) preserves the printed intervals. The available 200-case scoring summary, citation denominator and interval provenance require reconciliation; see [known issues](docs/known_issues.md). Do not treat this table or its CSV as evidence of a successful rerun.
 
 ## Repository contents
 
