@@ -1,0 +1,5 @@
+# Dependency inventory only: the original versions have not been recovered.
+# This is NOT a validated or locked reproduction environment.
+# Offline release tools/tests use only Python's standard library.
+pandas
+pyserini

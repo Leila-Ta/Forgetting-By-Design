@@ -1,0 +1,42 @@
+{
+  "validation_date": "2026-11-10",
+  "python": "3.12.14",
+  "scope": "New release utilities and supplied-file semantics only. No real BM25, generation, NLI or paper-table reproduction.",
+  "unit_tests_passed": 11,
+  "original_runner_byte_identical": true,
+  "materializer": {
+    "unique_supplied_claim_texts": 13545,
+    "semantic_roundtrips": {
+      "forget_queries.tsv": true,
+      "stageB_forget_1000.tsv": true,
+      "stageB_jobs_PRE_1000.csv": true,
+      "stageB_jobs_POST_1000.csv": true,
+      "stageB_jobs_FILT_1000.csv": true,
+      "keep_person_only.with_qid.tsv": true,
+      "forgetset_meta.csv": true,
+      "forget_set_resolved.jsonl": true,
+      "robustness_subset200.jsonl": true
+    },
+    "refuses_existing_output_directory": true,
+    "fresh_upstream_FEVER_download_tested": false,
+    "test_input": "Temporary FEVER-shaped id/claim JSONL made from supplied original texts; not a new or downloaded dataset."
+  },
+  "offline_exposure_checks": {
+    "pool630": {
+      "PRE": 973,
+      "POST": 0,
+      "FILT": 0
+    },
+    "resolved605": {
+      "PRE": 974,
+      "POST": 0,
+      "FILT": 53
+    }
+  },
+  "scientific_experiments_reproduced": [],
+  "real_Pyserini_tested": false,
+  "full_CFF_schema_validator_run": false,
+  "CFF_yaml_parse_checked": true,
+  "internal_markdown_links_checked": true,
+  "python_files_compile_checked": 6
+}

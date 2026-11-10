@@ -1,0 +1,65 @@
+{
+  "prepared_on": "2026-11-10",
+  "status": "candidate artefacts; not verified published-run manifests",
+  "transformation": "No claim text or model answer text bundled here. IDs/titles/annotations and SHA-256 of each exact UTF-8 claim are preserved. Order is preserved per source. No retargeting, deduplication of query-target pairs, or correction of results.",
+  "qid_namespace": "FEVER claim IDs as decimal strings, not local Keep ordinals or page-list ordinals",
+  "sources": [
+    {
+      "source_file": "forbidden_docids_from_forgetset.txt",
+      "source_sha256": "1c1f87b3c9267450056391f00d53cf23bed8c951b56003e4fa2f56eb7f79cda6",
+      "source_bytes": 8637
+    },
+    {
+      "source_file": "stageB_subset200_seed13 (2)(1).jsonl",
+      "source_sha256": "e5bb9781132df0773313083d7335e37814ac0abb77eb94a03d64c8a35eaef960",
+      "source_bytes": 20382
+    },
+    {
+      "source_file": "run_stageB.py",
+      "source_sha256": "68cc983f810001e43ac0690aea2f1e8390cacdaa4e0a8bec5abcf05cb60e9c20",
+      "source_bytes": 4662
+    },
+    {
+      "source_file": "forget_set_resolved.jsonl",
+      "source_sha256": "3c5508b0e97c7bf6e099b046b75b0163b5d22bd0884605081b28ca77f5635e29",
+      "source_bytes": 365819
+    },
+    {
+      "source_file": "forbidden_docids_from_pool.txt",
+      "source_sha256": "c6e29edf1d93e0486c6e0dba0a832c235ae06a00dff318774cc6c448880be090",
+      "source_bytes": 9695
+    },
+    {
+      "source_file": "stageB_forget_1000.tsv",
+      "source_sha256": "af72689c774d0c0e583bd6ac10d177c3ad47c7f6c6515e11285bc01795ff345d",
+      "source_bytes": 95223
+    },
+    {
+      "source_file": "forget_queries.tsv",
+      "source_sha256": "c6e30b98942bbf04b0d00449f94c8becb9cdabf5de4cb30787dbb806161111b7",
+      "source_bytes": 352840
+    },
+    {
+      "source_file": "forgetset_meta.csv",
+      "source_sha256": "47e28cb676d97441aafaf1fd7f5a4b239061c6158a6a2292cddef5b39db1839b",
+      "source_bytes": 90923
+    },
+    {
+      "source_file": "keep_person_only.with_qid.tsv",
+      "source_sha256": "5c97438d66b7ec0992675396842e16f03eacc3bfef072013d1b53eb8d3dfb571",
+      "source_bytes": 695694
+    }
+  ],
+  "counts": {
+    "forget_pool_rows": 3690,
+    "forget_pool_targets": 630,
+    "forget_resolved_rows": 3542,
+    "forget_resolved_targets": 605,
+    "forget_1000_qids": 1000,
+    "robustness_200_qids": 200,
+    "keep_pairs": 10140,
+    "keep_unique_qids": 9855,
+    "keep_target_pages": 676
+  },
+  "licensing": "See ../LICENSING.md and data/README.md; no repository-wide or data licence grant is invented."
+}

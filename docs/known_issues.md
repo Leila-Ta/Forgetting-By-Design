@@ -1,0 +1,14 @@
+# Known artefact and reporting questions
+
+These are findings about candidate supplied files, not corrections to the published paper. The printed report card is preserved unchanged.
+
+1. **Target/scope versions.** The 3,690-query/630-target pool and 3,542-query/605-target resolved view differ on 41 shared target assignments; ten changes occur in the 1,000-query sample. The masks share 591 IDs. No resolver/alias/selection implementation or final run manifest determines which policy boundary was used in publication.
+2. **Stored PRE flags.** The supplied PRE TSV records zero exposure everywhere. Existing served lists yield 973/1,000 events under pool630 or 974/1,000 under resolved605. The original script writes zero if no mask is supplied; this is a possible cause, not proven historical execution evidence.
+3. **FILT scope sensitivity.** Supplied FILT raw lists equal PRE on all 1,000 queries. Filtering by pool630 reproduces every served list and gives zero exact-ID exposure. Under resolved605, 53/1,000 served lists have an event. Both are labelled scope-dependent file analyses, not answer leakage or replacement published values.
+4. **Scoring denominators.** A supplied summary declares N_total=200 for each Forget/Keep state. If N_score is non-abstention, Forget abstention percentages match Table 5. N_cite/N_total gives 64.0/8.0/9.5, while the paper defines CiteCov over non-abstentions. The summary has no leakage numerators or full run IDs; it does not prove which sample produced the published table. Do not multiply counts by five or silently change its denominator.
+5. **Intervals.** Numerator/denominator/procedure recovery is necessary. Conditional Wilson checks do not match some printed intervals, e.g. 5/1,000 gives approximately [0.214,1.165]%, rather than printed [0.2,1.4]%. This is arithmetic under a specified count, not a demonstrated paper correction.
+6. **Keep populations.** Candidate 723-page, 6,942-query and 9,855-query views are distinct. The larger view's 10,140 rows are unique query-target pairs, not duplicate queries to discard. The published 8,268-control manifest and three-state ranks are missing.
+7. **HWE and swaps.** All candidate weights are 1.0, but the earlier category means do not equal current own-target rank rates. The indicator/scorer is missing. The swap job file has 150 baseline answers and a three-variant request label; no actual swap results are established. The paper's instantiated AR-ES is neutral-only.
+8. **Incomplete execution assets.** The supplied 197 MiB ZIP omits two declared stored-field files. No complete index pair, corpus recipe or original environment exists in this package. Generation/scoring code is absent; malformed/debug/TODO inputs are excluded.
+
+Author review should resolve original run identity, policy scope, denominator definitions, utility population and third-party rights before expanding the release or describing it as fully reproducible.
